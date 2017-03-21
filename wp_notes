@@ -1,0 +1,32 @@
+// Exporting Trellis WP_DATABASE for provisioning
+
+I've been deploying Trellis sites for months now and I still miss this most of the time.
+
+@andrew40 also don't forget that you'll need to manually import/upload your uploads and database after deploying. Here's a quick rundown:
+
+1) ssh to your Vagrant box and export your database:
+$ cd trellis && vagrant ssh
+
+2) change directories to your web root on the Vagrant box and export your db to a dumpfile:
+$ cd /srv/www/yourdomain.com/current/
+$ wp db export
+
+3) exit the ssh session (type exit) and find the database dump file in your Trellis directory named something like yourdomain_com_development.sql. Upload the dump file to your DO droplet in /srv/www/yourdomain.com/current. I usually just use an (S)FTP client for this. Also while you're there copy your uploads directory from site/web/app/ to /srv/www/yourdomain.com/shared/
+
+4) ssh to your DO droplet, change directories to your web root:
+$ ssh web@yourdomain.com
+$ cd /srv/www/yourdomain.com/current
+
+5) Trellis automatically sets up WordPress in when you deploy, but doesn't set up your database, so reset the database and import your dumpfile:
+$ wp db reset
+$ wp db import yourdomain_com_development.sql
+
+6) Search and replace your development URL with your production URL:
+$wp search-replace yourdomain.dev yourdomain.com
+
+And that's it! Now your site is deployed and its database and uploads are copied. Remember, too, that Trellis doesn't maintain your database or uploads in version control, so you might want to spend the extra buck or two to enable DO backups, or find some other periodic backup plan for those assets.
+
+I hope this is helpful!
+
+
+————————

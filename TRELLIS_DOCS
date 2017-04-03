@@ -19,8 +19,9 @@ in root run
 # @ example.com/site/web/app/themes/
 $ composer create-project roots/sage your-theme-name 8.5.1
 
-Go to theme directory, run
+Go to theme directory pkg installer, run
   npm install
+  bower install
 
   gulp watch <-- watches for changes
 

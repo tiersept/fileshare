@@ -46,3 +46,11 @@ dir/group_vars
   dir/production
   /vault      -> generate passwords & salt
   /sites      -> set site name, droplet ip & git repo //https://roots.io/salts.html
+
+  // SETUP DEV ENVIRONMENT [SAGE] //------------------------------------------------------
+
+  dir\site\web\app\themes\projectname\assets\manifest.json
+
+  "config": {
+    "devUrl": "http://example.dev" <--- change to PROJECTNAME.dev
+    }

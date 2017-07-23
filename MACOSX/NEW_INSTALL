@@ -1,0 +1,46 @@
+//BUILD TOOLS
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap caskroom/cask
+
+brew install node git ansible 
+
+brew tap homebrew/homebrew-php
+brew install php71
+
+brew install composer
+
+brew cask install virtualbox vagrant
+
+npm install -g npm@latest
+npm install -g gulp bower
+
+npm install -g yo
+
+
+
+//APPS
+
+brew cask install google-chrome
+brew cask install telegram
+brew cask install dropbox
+brew cask install filezilla
+brew cask install spotify
+brew cask install atom
+brew cask install firefox
+brew cask install sketch
+brew cask install dropbox
+brew cask install resilio
+brew cask install tunnelblick
+brew cask install slack
+brew cask install vlc
+brew cask install deluge
+brew cask install onyx
+
+//BASH
+
+— remove name and show pwd
+
+sudo nano /etc/bashrc
+PS1=“\w \$"

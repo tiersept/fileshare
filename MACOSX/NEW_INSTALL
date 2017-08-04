@@ -1,4 +1,4 @@
-//BUILD TOOLS
+// BUILD TOOLS
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -15,9 +15,7 @@ brew cask install virtualbox vagrant
 
 npm install -g npm@latest
 npm install -g gulp bower
-
 npm install -g yo
-
 
 
 //APPS
@@ -37,6 +35,7 @@ brew cask install slack
 brew cask install vlc
 brew cask install deluge
 brew cask install onyx
+brew cask install discord
 
 //BASH
 

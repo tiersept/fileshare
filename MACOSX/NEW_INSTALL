@@ -3,8 +3,9 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap caskroom/cask
+brew cask install android-platform-tools
 
-brew install node git ansible 
+brew install node git ansible
 
 brew tap homebrew/homebrew-php
 brew install php71
@@ -14,8 +15,11 @@ brew install composer
 brew cask install virtualbox vagrant
 
 npm install -g npm@latest
-npm install -g gulp bower
-npm install -g yo
+npm install -g gulp gulp-cli bower
+npm install -g cordova@6.5.0 << Stable
+
+npm install -g yo generator-webapp
+
 
 
 //APPS
@@ -28,7 +32,6 @@ brew cask install spotify
 brew cask install atom
 brew cask install firefox
 brew cask install sketch
-brew cask install dropbox
 brew cask install resilio
 brew cask install tunnelblick
 brew cask install slack
@@ -36,6 +39,7 @@ brew cask install vlc
 brew cask install deluge
 brew cask install onyx
 brew cask install discord
+brew cask install licecap
 
 //BASH
 

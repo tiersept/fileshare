@@ -1,11 +1,11 @@
 Make new project directory
 In new directory clone...
 
-// INSTALL TRELLIS        //------------------------------------------------------
+// INSTALL TRELLIS                //------------------------------------------------------
 
 $ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
 
-// INSTALL BEDROCK        //------------------------------------------------------
+// INSTALL BEDROCK                //------------------------------------------------------
 
 $ git clone --depth=1 git@github.com:roots/bedrock.git site && rm -rf site/.git
 
@@ -14,7 +14,7 @@ IMP <-- DELETE .git files for repo init
 in root run
   git init
 
-// INSTALLING SAGE 8.5.1  //------------------------------------------------------
+// INSTALLING SAGE 8.5.1          //------------------------------------------------------
 
 # @ example.com/site/web/app/themes/
 $ composer create-project roots/sage your-theme-name 8.5.1
@@ -26,7 +26,7 @@ Go to theme directory pkg installer, run
   gulp watch <-- watches for changes
 
 
-// INSTALLING SOIL        //------------------------------------------------------
+// INSTALLING SOIL                //------------------------------------------------------
 
 in dir site, run
   composer require roots/soil 3.7.1
@@ -54,3 +54,20 @@ dir/group_vars
   "config": {
     "devUrl": "http://example.dev" <--- change to PROJECTNAME.dev
     }
+
+
+// PROVISION SERVER               //------------------------------------------------------
+
+ Run cmd
+
+  ansible-galaxy install -r requirements.yml
+
+  ansible-playbook server.yml -e env=<environment>
+
+
+
+// DEPLOY SITE                    //------------------------------------------------------
+
+  Run cmd
+
+    ./bin/deploy.sh <environment> <domain>

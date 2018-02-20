@@ -71,3 +71,38 @@ dir/group_vars
   Run cmd
 
     ./bin/deploy.sh <environment> <domain>
+
+
+
+// SOIL CLEANUP MOD in setup.php //------------------------------------------------------
+
+  /**
+   * Add and remove body_class() classes CUSTOM SOIL CODE BECAUSE IT DOESNT WORK
+   */
+  function body_class($classes) {
+    // Add post/page slug if not present
+    if (is_single() || is_page() && !is_front_page()) {
+      if (!in_array(basename(get_permalink()), $classes)) {
+        $classes[] = basename(get_permalink());
+      }
+    }
+
+    // Remove unnecessary classes
+    $home_id_class = 'page-id-' . get_the_ID();
+    global $post;
+    $post_slug=$post->post_name;
+    $remove_classes = [
+      'page',
+      'page-template-template-home',
+      'page-template-template-home-php',
+      'page-template-template-' . $post_slug,
+      'page-template-template-' . $post_slug . '-php',
+      'page-template-default',
+      'page-template',
+      $home_id_class
+    ];
+    $classes = array_diff($classes, $remove_classes);
+
+    return $classes;
+  }
+  add_filter('body_class', __NAMESPACE__ . '\\body_class');

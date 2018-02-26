@@ -12,24 +12,24 @@ $ cd /srv/www/yourdomain.com/current/
 $ wp db export
 
 3) copy Uploads folder from vagrant to local
-$ scp -rpP 2222 vagrant@127.0.0.1:/srv/www/appedemic.nl/shared/uploads/* . [Run in folder you want to copy to]
+$ scp -rpP 2222 vagrant@127.0.0.1:/srv/www/appedemic.nl/shared/uploads/* uploads/ [Run in folder you want to copy to]
 
-3) exit the ssh session (type exit) and find the database dump file in your Trellis directory named something like yourdomain_com_development.sql. Upload the dump file to your DO droplet in /srv/www/yourdomain.com/current. I usually just use an (S)FTP client for this. Also while you're there copy your uploads directory from site/web/app/ to /srv/www/yourdomain.com/shared/
+4) Push uploads to remote host 
+$ rsync -a /Users/relic/Sites/[LOCAL PATH] root@[ADRES]:/srv/www/SITENAME/shared
 
-4) ssh to your DO droplet, change directories to your web root:
+5) exit the ssh session (type exit) and find the database dump file in your Trellis directory named something like yourdomain_com_development.sql. Upload the dump file to your DO droplet in /srv/www/yourdomain.com/current. I usually just use an (S)FTP client for this. Also while you're there copy your uploads directory from site/web/app/ to /srv/www/yourdomain.com/shared/
+
+6) ssh to your DO droplet, change directories to your web root:
 $ ssh web@yourdomain.com
 $ cd /srv/www/yourdomain.com/current
 
-5) Trellis automatically sets up WordPress in when you deploy, but doesn't set up your database, so reset the database and import your dumpfile:
+7) Trellis automatically sets up WordPress in when you deploy, but doesn't set up your database, so reset the database and import your dumpfile:
 $ wp db reset
 $ wp db import yourdomain_com_development.sql
 
-6) Search and replace your development URL with your production URL:
+8) Search and replace your development URL with your production URL:
 $wp search-replace yourdomain.dev yourdomain.com
 
-And that's it! Now your site is deployed and its database and uploads are copied. Remember, too, that Trellis doesn't maintain your database or uploads in version control, so you might want to spend the extra buck or two to enable DO backups, or find some other periodic backup plan for those assets.
-
-I hope this is helpful!
 
 
 ————————

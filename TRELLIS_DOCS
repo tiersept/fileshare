@@ -26,14 +26,25 @@ $ composer create-project roots/sage your-theme-name 8.5.4
 Go to theme directory pkg installer, run
   npm install
   bower install
+  
+To add packages
 
-  gulp watch <-- watches for changes
+  bower install --save [package-name]
+
+$ gulp watch <-- watches for changes
 
 
-// INSTALLING SOIL                //------------------------------------------------------
+// INSTALLING PLUGINS             //------------------------------------------------------
 
 in dir site, run
-  composer require roots/soil 3.7.1
+  composer require roots/soil
+  composer require wpackagist-plugin/unique-headers
+  composer require wpackagist-plugin/post-types-order
+  composer require wpackagist-plugin/wp-smushit
+  composer require sybrew/the-seo-framework
+  composer require wpackagist-plugin/the-seo-framework-extension-manager
+  composer require wpackagist-plugin/svg-support
+  composer require wpackagist-plugin/contact-form-7
 
 then activate using wp-cli if on mac, if not then activate in WP admin panel
 

@@ -3,7 +3,11 @@ In new directory clone...
 
 // INSTALL TRELLIS                //------------------------------------------------------
 
+-latest-
 $ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
+
+-stable-
+$ git clone --master 0.9.9 https://github.com/roots/trellis.git && rm -rf trellis/.git
 
 // INSTALL BEDROCK                //------------------------------------------------------
 
@@ -14,10 +18,10 @@ IMP <-- DELETE .git files for repo init
 in root run
   git init
 
-// INSTALLING SAGE 8.5.1          //------------------------------------------------------
+// INSTALLING SAGE 8.5.4          //------------------------------------------------------
 
 # @ example.com/site/web/app/themes/
-$ composer create-project roots/sage your-theme-name 8.5.1
+$ composer create-project roots/sage your-theme-name 8.5.4
 
 Go to theme directory pkg installer, run
   npm install

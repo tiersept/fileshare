@@ -44,7 +44,7 @@ in dir site, run
   composer require sybrew/the-seo-framework
   composer require wpackagist-plugin/the-seo-framework-extension-manager
   composer require wpackagist-plugin/svg-support
-  composer require wpackagist-plugin/contact-form-7
+  composer require wpackagist-plugin/html-forms
 
 then activate using wp-cli if on mac, if not then activate in WP admin panel
 

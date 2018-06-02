@@ -45,6 +45,7 @@ in dir site, run
   composer require wpackagist-plugin/the-seo-framework-extension-manager
   composer require wpackagist-plugin/svg-support
   composer require wpackagist-plugin/html-forms
+  composer require wpackagist-plugin/members
 
 then activate using wp-cli if on mac, if not then activate in WP admin panel
 

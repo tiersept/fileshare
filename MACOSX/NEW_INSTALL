@@ -7,11 +7,15 @@ npm install -g npm@latest
 npm install -g yarn
 
 
-//APPS
+// APPS
 
 brew install google-chrome telegram dropbox spotify firefox resilio-sync slack vlc deluge discord brave-browser homebrew/cask/docker figma notion insomnia iterm2 sourcetree spectacle visual-studio-code android-platform-tools
 
-//BASH
+
+brew install zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+// BASH
 
 — remove name and show pwd
 

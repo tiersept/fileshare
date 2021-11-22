@@ -1,45 +1,14 @@
 // BUILD TOOLS
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew tap caskroom/cask
-brew cask install android-platform-tools
-
-brew install node git ansible
-
-brew tap homebrew/homebrew-php
-brew install php71
-
-brew install composer
-
-brew cask install virtualbox vagrant
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 npm install -g npm@latest
-npm install -g gulp gulp-cli bower
-npm install -g cordova@6.5.0 << Stable
-
-npm install -g yo generator-webapp
-
-
+npm install -g yarn
+brew install git nvm
 
 //APPS
 
-brew cask install google-chrome
-brew cask install telegram
-brew cask install dropbox
-brew cask install filezilla
-brew cask install spotify
-brew cask install atom
-brew cask install firefox
-brew cask install sketch
-brew cask install resilio
-brew cask install tunnelblick
-brew cask install slack
-brew cask install vlc
-brew cask install deluge
-brew cask install onyx
-brew cask install discord
-brew cask install licecap
+brew --cask install virtualbox google-chrome telegram dropbox filezilla spotify firefox resilio slack vlc deluge discord brave-browser docker figma notion insomnia iterm2 sourcetree spectacle spark visual-studio-code android-platform-tools
 
 //BASH
 

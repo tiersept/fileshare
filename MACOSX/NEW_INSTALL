@@ -9,7 +9,7 @@ npm install -g yarn
 
 //APPS
 
-brew --cask install virtualbox google-chrome telegram dropbox spotify firefox resilio slack vlc deluge discord brave-browser docker figma notion insomnia iterm2 sourcetree spectacle spark visual-studio-code android-platform-tools
+brew install virtualbox google-chrome telegram dropbox spotify firefox resilio slack vlc deluge discord brave-browser docker figma notion insomnia iterm2 sourcetree spectacle spark visual-studio-code android-platform-tools
 
 //BASH
 

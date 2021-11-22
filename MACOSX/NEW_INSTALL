@@ -2,9 +2,10 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+brew install git nvm
 npm install -g npm@latest
 npm install -g yarn
-brew install git nvm
+
 
 //APPS
 

@@ -14,10 +14,11 @@ brew install google-chrome telegram dropbox spotify firefox resilio-sync slack v
 
 brew install zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+// colorls
 https://github.com/athityakumar/colorls#installation
 
 https://blog.larsbehrenberg.com/the-definitive-iterm2-and-oh-my-zsh-setup-on-macos
-
+https://github.com/agkozak/zsh-z
 
 // BASH
 

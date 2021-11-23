@@ -19,10 +19,3 @@ https://github.com/athityakumar/colorls#installation
 
 https://blog.larsbehrenberg.com/the-definitive-iterm2-and-oh-my-zsh-setup-on-macos
 https://github.com/agkozak/zsh-z
-
-// BASH
-
-— remove name and show pwd
-
-sudo nano /etc/bashrc
-PS1=“\w \$"

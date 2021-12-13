@@ -13,7 +13,7 @@ npm install -g yarn
 
 
 // install APPS
-brew install google-chrome telegram dropbox spotify firefox resilio-sync slack vlc deluge discord brave-browser homebrew/cask/docker figma notion insomnia iterm2 sourcetree rectangle visual-studio-code android-platform-tools webtorrent adobe-acrobat-reader adobe-creative-cloud
+brew install google-chrome telegram dropbox spotify firefox resilio-sync slack vlc deluge discord brave-browser homebrew/cask/docker figma notion insomnia iterm2 sourcetree rectangle visual-studio-code android-platform-tools webtorrent adobe-acrobat-reader adobe-creative-cloud nordvpn
 
 // install ZSH
 brew install zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
